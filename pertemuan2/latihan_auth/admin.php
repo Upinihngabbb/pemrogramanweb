@@ -51,8 +51,6 @@ https://www.tooplate.com/view/2114-pixie
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            
-            
             <li class="nav-item">
               <a class="nav-link" href="products.html">Products
                 <span class="sr-only">(current)</span>
