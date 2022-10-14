@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo "berhasil";
 if(isset($_SESSION['username'])){
     session_destroy();
     echo '<script>

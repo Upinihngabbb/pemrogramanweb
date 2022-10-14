@@ -6,6 +6,7 @@ $database = [
     'password' => 'yatimpunk'
 ];
 
+
 // cek apakah terdapat submit yang dilakukan
 if(isset($_POST['submit'])){
     // mengambil nilai yang dikirim melalui method phost ke dalam variabel
