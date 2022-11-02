@@ -21,7 +21,7 @@ if(isset($_SESSION['username'])){
     <br />
     <label for="password">Pasword</label>
     <input name="password" type="password" />
-    <br />
+    <br />A
     <input type="submit" name="submit" value="Login">
 </form>
 </body>
