@@ -1,14 +1,16 @@
 <?php
 session_start();
-//ambil data dari form login 
-$username = $_POST['username']; //<-- ini belum dari sql ijection ID
-
 //memanggil konfig database
 include_once('config.php');
-
-//ambil data dari database
+//ambil data dari form login 
+   
+$username = $_POST['username']; //<-- ini belum dari sql ijection ID
+        
+    //ambil data dari database
 $query = mysqli_query($conn_db,"SELECT * FROM users WHERE username='$username'");
-$user = mysqli_fetch_assoc($query);
+   $user = mysqli_fetch_assoc($query);
+
+
 
 // cek apakah terdapat submit yang dilakukan
 if(isset($_POST['submit'])){
@@ -17,7 +19,7 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
 
     // mengecek apakah username dan password sesuai dengan database
-    if ($username == $user['username'] && $password_verify($_POST['password'],$user['password']))  {
+    if ($username == $user['username'] && password_verify($_POST['password'],$user['password']))  {
         // set session username
         $_SESSION['username'] = $username;
         // redirect/mengarahkan menuju halaman admin
@@ -29,6 +31,6 @@ if(isset($_POST['submit'])){
     }
 } else {
     //jika tidak ada submit mengembalikan ke login-page
-    echo '<script> window.location="login-page.php"; </script>';
+    echo '<script> window.location="register.php"; </script>';
 }
 ?>
